@@ -1,31 +1,24 @@
 [build-system]
-requires = [
-    "flit",
-]
+requires = ["flit"]
 build-backend = "flit.buildapi"
 
 [project]
 name = "localleaf"
 readme = "README.md"
 requires-python = ">=3"
+license = {file = "LICENSE"}
 authors = [
-    { name = "Jaziel Loureiro", email = "jazielloureiro17@gmail.com" },
-    { name = "Moritz Glöckl", email = "moritzgloeckl@users.noreply.github.com" },
+    {name = "Jaziel Loureiro", email = "jazielloureiro17@gmail.com"},
+    {name = "Moritz Glöckl", email = "moritzgloeckl@users.noreply.github.com"},
 ]
 maintainers = [
-    { name = "Lineaje DepFixer", email = "221268890+Lineaje-DepFixer@users.noreply.github.com" },
+    {name = "Jaziel Loureiro", email = "jazielloureiro17@gmail.com"},
 ]
-keywords = [
-    "overleaf",
-    "local",
-    "sync",
-    "latex",
-    "tex",
-]
+keywords = ["overleaf", "local", "sync", "latex", "tex"]
 classifiers = [
     "License :: OSI Approved :: MIT License",
     "Intended Audience :: Science/Research",
-    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3"
 ]
 dependencies = [
     "beautifulsoup4==4.11.1",
@@ -42,22 +35,13 @@ dependencies = [
     "six==1.16.0",
     "socketIO-client==0.5.7.2",
     "soupsieve==2.6",
-    "urllib3==2.2.3",
-    "websocket-client==1.8.0",
+    "urllib3>=2.6.3",
+    "websocket-client==1.8.0"
 ]
-dynamic = [
-    "description",
-]
-version = "1.1.1+lineaje.1"
-
-[project.license]
-file = "LICENSE"
+dynamic = ["version", "description"]
 
 [project.urls]
 Source = "https://github.com/jazielloureiro/LocalLeaf"
-Homepage = "https://github.com/lineaje-labs-gos/jazielloureiro-LocalLeaf"
-Repository = "https://github.com/lineaje-labs-gos/jazielloureiro-LocalLeaf"
-Tracker = "https://github.com/lineaje-labs-gos/jazielloureiro-LocalLeaf/issues"
 
 [project.scripts]
 lleaf = "localleaf.cli:cli"
